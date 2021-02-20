@@ -1,0 +1,20 @@
+
+    <div class="col-sm-12 col-md-8 col-lg-9 value content" id="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
+        <isloop items="${product.reviews}" var="review" status="reviewStatus">
+            <isprint value="${review.text}" encoding="off" />
+            <isloop items="${[1, 2, 3, 4, 5]}" var="star">
+                <i class="fa
+                    <isif condition="${review.rating >= star}">
+                        fa-star
+                    <iselseif condition="${(review.rating % 1 > 0) && (Math.ceil(review.rating) >= star)}">
+                        fa-star-half-o
+                    <iselse>
+                        fa-star-o
+                    </isif>
+                    " aria-hidden="true">
+                </i>
+            </isloop>
+            <br>
+        </isloop>
+    </div>
+
