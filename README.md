@@ -1,1 +1,2 @@
-# Demo-CC
+# Demo-Commerce Cloud
+Rating and Reviews
